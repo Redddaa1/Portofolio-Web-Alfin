@@ -130,25 +130,6 @@ span{
 .home-content p{
     font-size: 1.6rem;
 }
-
-.home-img{
-    border-radius: 50%;
-}
-
-.home-img.img{
-    position: relative;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid black;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.home-img.img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
 .social-icons a{
     display: inline-flex;
     justify-content: center;
@@ -227,23 +208,23 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content: " Sofware Engineer";
+        content: " Web Developer";
     }
     21%, 40%{
-        content: " Website Engineer";
+        content: " UI/UX Designer";
     }
     41%, 60%{
-        content: " Website Designer";
+        content: " Web Developer";
     }
     61%, 80%{
-        content: " Mechine Engineer";
+      content: " UI/UX Designer";
     }
     81%, 100%{
-        content: " Engine Engineer ";
+        content: " Web Developer";
     }
 }
 
-@media(max-width){
+@media(max-width:995px){
     .home{
         gap: 4rem;
     }
@@ -261,11 +242,6 @@ span{
 
     .home-content h1{
         font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 70vh;
-        margin-top: 4rem;
     }
 }
 .services {
@@ -720,6 +696,687 @@ header.scrolled {
 .footer p {
   font-size: 1.4rem;
   opacity: 0.7;
+}
+/* intro layout */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.intro-text h1 {
+  font-size: 6rem;
+}
+
+.intro-text h3 {
+  font-size: 3.5rem;
+}
+
+
+.profile-pic {
+  width: 250px;       
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff3b3b;
+  box-shadow: 0 0 30px rgba(255, 59, 59, 0.6);
+  flex-shrink: 0;
+}
+
+.intro-text h1 {
+  margin-bottom: 0.5rem;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.home-img {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(255, 59, 59, 0.5);
+}
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .home-img img {
+    width: 260px;
+    height: 260px;
+  }
+}
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.experience-detail {
+  min-height: 100vh;
+  display: flex;
+  gap: 4rem;
+  padding: 120px 10%;
+  background: #000;
+  color: #fff;
+}
+
+/* LEFT */
+.experience-text {
+  flex: 1;
+}
+
+.experience-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.experience-text h3 {
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.experience-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.experience-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-text ul li {
+  margin-bottom: 8px;
+}
+
+/* RIGHT */
+.experience-slider {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track img {
+  width: 350px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ARROW */
+.arrow {
+  background: none;
+  border: 2px solid orange;
+  color: orange;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.arrow.left {
+  margin-right: 10px;
+}
+
+.arrow.right {
+  margin-left: 10px;
+}
+.experience-detail {
+  min-height: 100vh;
+  padding: 120px 10%;
+  display: flex;
+  gap: 4rem;
+  background: #000;
+  color: #fff;
+}
+
+/* TEXT */
+.experience-text {
+  flex: 1;
+}
+
+.experience-text h1 {
+  font-size: 3rem;
+}
+
+.experience-text h3 {
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.experience-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* SLIDER */
+.experience-slider {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track img {
+  width: 380px;
+  height: 240px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ARROW */
+.arrow {
+  border: 2px solid orange;
+  background: transparent;
+  color: orange;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.experience-slider-3d {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experience-slider-3d {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* CAROUSEL */
+.carousel {
+  position: relative;
+  width: 420px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SLIDE BASE */
+.slide {
+  position: absolute;
+  width: 380px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0.7);
+  filter: blur(6px) brightness(40%);
+}
+
+/* AKTIF (TENGAH) */
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0) brightness(100%);
+  z-index: 3;
+}
+
+/* SEBELAH KIRI */
+.slide.prev {
+  opacity: 0.6;
+  transform: translateX(-220px) scale(0.85);
+  z-index: 2;
+}
+
+/* SEBELAH KANAN */
+.slide.next {
+  opacity: 0.6;
+  transform: translateX(220px) scale(0.85);
+  z-index: 2;
+}
+
+/* ARROW */
+.nav-btn {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #ff7a00, #ffae42);
+  color: #fff;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 20;
+
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.45);
+  transition: all 0.3s ease;
+}
+
+
+
+.nav-btn:hover {
+  background: orange;
+  color: black;
+}
+.nav-btn:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 12px 30px rgba(255, 122, 0, 0.8);
+}
+.nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+
+.nav-btn.left {
+  left: 10px;
+  left: -20px;
+}
+
+.nav-btn.right {
+  right: 10px;
+  right: -20px;
+
+}
+  
+
+.nav-btn {
+  position: relative;
+  z-index: 10; /* PENTING BANGET */
+}
+.slide {
+  pointer-events: none;
+}
+.experience-slider-3d {
+  position: relative;
+  z-index: 1;
+}
+@keyframes pulseArrow {
+  0% { box-shadow: 0 0 0 rgba(255, 122, 0, 0.6); }
+  50% { box-shadow: 0 0 20px rgba(255, 122, 0, 0.8); }
+  100% { box-shadow: 0 0 0 rgba(255, 122, 0, 0.6); }
+}
+
+.nav-btn {
+  animation: pulseArrow 2.5s infinite;
+}
+.experience-slider {
+  position: relative;
+  width: 480px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+}
+
+.slide {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+  transition: 0.6s ease;
+  border-radius: 16px;
+  filter: blur(4px) brightness(0.6);
+}
+
+.slide.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 3;
+}
+
+.slide.left {
+  transform: translate(-120%, -50%) scale(0.75);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.slide.right {
+  transform: translate(20%, -50%) scale(0.75);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: orange;
+}
+
+.nav-btn.prev {
+  left: -20px;
+}
+
+.nav-btn.next {
+  right: -20px;
+}
+.experience-slider {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.slide.left {
+  transform: translateX(-60%) scale(0.7);
+  opacity: 0.3;
+}
+
+.slide.right {
+  transform: translateX(60%) scale(0.7);
+  opacity: 0.3;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.nav-btn.prev { left: 0; }
+.nav-btn.next { right: 0; }
+.experience-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.nav-btn.prev { left: 10px; }
+.nav-btn.next { right: 10px; }
+
+section {
+  scroll-margin-top: 80px;
+}
+/* GRID EXPERIENCE */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.experience-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  height: 280px; /* ⬅️ bikin kartu tinggi */
+}
+
+/* FOTO */
+.experience-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ⬅️ foto auto gede & proporsional */
+  transition: transform 0.6s ease;
+}
+
+/* HOVER EFFECT */
+.experience-card:hover img {
+  transform: scale(1.08);
+}
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: #fff;
+}
+
+.experience-detail {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* KIRI (TEXT) */
+.experience-text {
+  flex: 1; /* 40% */
+}
+
+/* KANAN (FOTO) */
+.experience-slider {
+  flex: 1.5; /* 60% ⬅️ BIKIN FOTO LEBAR */
+  position: relative;
+}
+.carousel {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel img.active {
+  opacity: 1;
+  position: relative;
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.nav-btn.prev { left: 15px; }
+.nav-btn.next { right: 15px; }
+@media (max-width: 900px) {
+  .experience-detail {
+    flex-direction: column;
+  }
+
+  .experience-slider {
+    width: 100%;
+  }
+
+  .carousel {
+    height: 300px;
+  }
+}
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.carousel img {
+  cursor: pointer;
 }
 
 

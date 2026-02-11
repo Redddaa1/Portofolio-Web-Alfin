@@ -1,14 +1,15 @@
-<!DOCTYPE html>
 <html lang="en">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Portofolio Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <title>Portofolio Website</title>
 </head>
+
 <body>
    <header>
     <a href="#" class="logo">Alfin</a>
@@ -24,24 +25,29 @@
 
    </header> 
    <section class="home" id="home">
+  <div class="home-content">
 
-    <div class="home-img">
-       <img src="../img/1a109d3e-99a1-4bdd-ab16-dbe52990a375.jpg" alt="">
-    </div>
-    <div class="home-content">
+    <div class="intro">
+      <img src="../img/Foto Alfin Web Portofolio.png" alt="Alfin" class="profile-pic">
+
+      <div class="intro-text">
         <h1>Hi, It's <span>Alfin</span></h1>
         <h3 class="typing-text">I'm a<span></span></h3>
-        <p>software Engineer</p>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-        <a href="#" class="btn">Hire me</a>
+        <p>Web Developer</p>
+      </div>
     </div>
-   </section>
-   <section class="services" id="services">
+
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+    <a href="#" class="btn">Hire me</a>
+  </div>
+</section>
+<section class="services" id="services">
   <h2 class="section-title">Services</h2>
 
   <div class="services-container">
@@ -123,7 +129,7 @@
   <div class="project-container">
 
     <a href="project1.html" class="project-card">
-      <img src="../img/Screenshot 2026-02-05 203326.png" alt="Project 1">
+      <img src="../img/Screenshot 2026-02-10 000920.png" alt="Project 1">
       <div class="project-info">
         <h3>Portfolio Website</h3>
         <p>HTML • CSS • JavaScript</p>
@@ -178,53 +184,50 @@
 
   <div class="experience-grid">
 
-    <!-- PKKT Online Shop -->
-    <a href="https://www.figma.com/design/jJWTQPIIjXNEa8DIcsxnI2/Coretan-2?node-id=0-1&t=OR5tvGB4avTnTm5L-1" target="_blank" class="experience-card">
-      <img src="../img/Screenshot 2026-02-05 221942.png" alt="PKKT Online Shop">
+    <a href="experience-detail.html?id=pkkt" class="experience-card">
+      <img src="../img/Screenshot 2026-02-10 123327.png">
       <div class="experience-overlay">
         <h3>PKKT Online Shop</h3>
         <p>Website Project</p>
       </div>
     </a>
 
-    <!-- Laravel Library -->
-    <a href="https://github.com/Redddaa1/Laravel-Library_XI-PPLG.git" target="_blank" class="experience-card">
-      <img src="../img/Screenshot 2026-02-05 222500.png" alt="Laravel Library">
+    <a href="experience-detail.html?id=laravel" class="experience-card">
+      <img src="../img/Screenshot 2026-02-05 222500.png">
       <div class="experience-overlay">
         <h3>Laravel Library</h3>
         <p>Web Application</p>
       </div>
     </a>
 
-    <!-- Ambassador Sekolah -->
-    <div class="experience-card">
-      <img src="../img/WhatsApp Image 2026-02-05 at 22.15.25.jpeg" alt="School Ambassador">
+    <a href="experience-detail.html?id=ambassador" class="experience-card">
+      <img src="../img/WhatsApp Image 2026-02-05 at 22.15.25.jpeg">
       <div class="experience-overlay">
         <h3>School Ambassador</h3>
         <p>Representing School</p>
       </div>
-    </div>
+    </a>
 
-    <!-- Marching Band -->
-    <div class="experience-card">
-      <img src="../img/WhatsApp Image 2026-02-05 at 22.15.25 (1).jpeg" alt="Marching Band">
+    <a href="experience-detail.html?id=marchingband" class="experience-card">
+      <img src="../img/WhatsApp Image 2026-02-05 at 22.15.25 (1).jpeg">
       <div class="experience-overlay">
         <h3>Marching Band</h3>
         <p>Management & Coordination</p>
       </div>
-    </div>
+    </a>
 
-    <!-- Festival Matematika -->
-    <div class="experience-card">
-      <img src="../img/WhatsApp Image 2026-02-05 at 22.15.25 (2).jpeg" alt="Math Festival Committee">
+    <a href="experience-detail.html?id=mathfest" class="experience-card">
+      <img src="../img/WhatsApp Image 2026-02-05 at 22.15.25 (2).jpeg">
       <div class="experience-overlay">
         <h3>Math Festival</h3>
         <p>Event Committee</p>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
+
+
 <section class="contact" id="contact">
   <h2 class="section-title">Contact Me</h2>
 
@@ -233,9 +236,7 @@
     <!-- Info -->
     <div class="contact-info">
       <h3>Let’s Work Together</h3>
-      <p>
-        Punya project, ide, atau mau kerja bareng?
-        Jangan ragu buat hubungi gue 🔥
+      <p>Terbuka untuk kerja sama profesional dan peluang kolaborasi.🔥
       </p>
 
       <div class="contact-social">
@@ -269,8 +270,14 @@
   });
 </script>
 <footer class="footer">
-  <p>© 2026 | Built with ❤️ by You</p>
+  <p>© 2026 | Built with ❤️ by Me</p>
 </footer>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
 
 </body>
 </html>

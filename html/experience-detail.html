@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Detail</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<section class="experience-detail">
+
+  <!-- LEFT : TEXT (ISI SENDIRI) -->
+  <div class="experience-text">
+    <h1>Judul Experience</h1>
+    <h3>Posisi / Role</h3>
+
+    <p>
+      Tulis penjelasan pengalaman kamu di sini.
+      Bisa jelasin tanggung jawab, kontribusi,
+      dan hasil dari pengalaman tersebut.
+    </p>
+
+    <ul>
+      <li><strong>Role:</strong> Frontend Developer</li>
+      <li><strong>Tech:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Duration:</strong> 3 Months</li>
+      <li><strong>Year:</strong> 2025</li>
+    </ul>
+
+    <a href="index.html#experiences" class="btn">Back</a>
+  </div>
+
+ <!-- RIGHT : FOTO -->
+<div class="experience-slider">
+
+  <button class="nav-btn prev">❮</button>
+
+  <div class="carousel">
+    <!-- FOTO DIISI JS -->
+  </div>
+
+  <button class="nav-btn next">❯</button>
+
+</div>
+
+
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const data = {
+    pkkt: {
+      title: "PKKT Online Shop",
+      role: "Frontend Developer",
+      desc: "Mengembangkan tampilan website online shop.",
+      detail: [
+        "UI halaman utama",
+        "Responsive design",
+        "Optimasi UX"
+      ],
+      images: [
+        "../img/Screenshot 2026-02-10 122239.png",
+        "../img/Screenshot 2026-02-10 123239.png",
+        "../img/Screenshot 2026-02-10 123225.png"
+      ]
+    },
+
+    laravel: {
+      title: "Laravel Library",
+      role: "Backend Developer",
+      desc: "Aplikasi manajemen perpustakaan.",
+      detail: [
+        "CRUD Buku",
+        "Auth Admin",
+        "MySQL"
+      ],
+      images: [
+        "../img/Screenshot 2026-02-05 222500.png"
+      ]
+    },
+
+    ambassador: {
+      title: "School Ambassador",
+      role: "Representative",
+      desc: "Mewakili sekolah dalam event dan promosi.",
+      detail: [
+        "Public speaking",
+        "Promosi sekolah",
+        "Event eksternal"
+      ],
+      images: [
+        "../img/WhatsApp Image 2026-02-05 at 22.15.25.jpeg"
+      ]
+    },
+
+    mathfest: {
+      title: "Math Festival",
+      role: "Participant",
+      desc: "Mengikuti lomba matematika.",
+      detail: [
+        "Problem solving",
+        "Team collaboration",
+        "Time management"
+      ],
+      images: [
+        "../img/WhatsApp Image 2026-02-05 222500.png"
+      ]
+    }
+  };
+
+  if (!id || !data[id]) {
+    document.body.innerHTML = "<h1 style='color:white;text-align:center'>Experience tidak ditemukan</h1>";
+    return;
+  }
+
+  const exp = data[id];
+
+  // ===== ISI TEKS =====
+  document.querySelector(".experience-text h1").textContent = exp.title;
+  document.querySelector(".experience-text h3").textContent = exp.role;
+  document.querySelector(".experience-text p").textContent = exp.desc;
+
+  const ul = document.querySelector(".experience-text ul");
+  ul.innerHTML = "";
+  exp.detail.forEach(item => {
+    ul.innerHTML += `<li>${item}</li>`;
+  });
+
+  // ===== CAROUSEL =====
+  const carousel = document.querySelector(".carousel");
+  carousel.innerHTML = "";
+
+  exp.images.forEach((img, i) => {
+    carousel.innerHTML += `
+      <img src="${img}" class="slide ${i === 0 ? "active" : ""}">
+    `;
+  });
+
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+  slides.forEach((slide, index) => {
+  slide.style.cursor = "pointer";
+
+  slide.addEventListener("click", () => {
+    console.log("Foto diklik:", slide.src);
+
+    // pindah ke foto berikutnya
+    current = (index + 1) % slides.length;
+    showSlide(current);
+  });
+});
+
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+});
+
+</script>
+
+
+
+
+
+</body>
+</html>
