@@ -32,7 +32,9 @@
 
       <div class="intro-text">
         <h1>Hi, It's <span>Alfin</span></h1>
-        <h3 class="typing-text">I'm a<span></span></h3>
+        <h3 class="typing-text">
+         I'm a <span id="typing"></span>
+        </h3>
         <p>Web Developer</p>
       </div>
     </div>
@@ -259,15 +261,33 @@
 
 
 <script>
-  const header = document.querySelector("header");
+const words = ["Web Developer", "UI/UX Designer"];
+const typingElement = document.getElementById("typing");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (!isDeleting) {
+    typingElement.textContent = currentWord.substring(0, charIndex++);
+    if (charIndex > currentWord.length) {
+      setTimeout(() => isDeleting = true, 1200);
     }
-  });
+  } else {
+    typingElement.textContent = currentWord.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 60 : 100);
+}
+
+typeEffect();
 </script>
 <footer class="footer">
   <p>© 2026 | Built with ❤️ by Me</p>
